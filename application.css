@@ -1,0 +1,45 @@
+/* JavaFX CSS - Leave this comment until you have at least create one rule which uses -fx-Property */
+.button{
+	
+    -fx-text-fill: #006464;
+    -fx-background-color: #bebebe;
+   -fx-border-radius: 15;
+    -fx-background-radius: 20;
+    -fx-padding: 5;
+}
+
+.button:hover {
+    -fx-background-color: linear-gradient(#2A5058, #61a2b1);
+}
+
+.text-field {
+    -fx-font-size: 12pt;
+    -fx-font-family: "Segoe UI Semibold";
+}
+
+#textFieldSearch{
+	-fx-min-width: 100;
+	-fx-min-height: 26;
+	
+
+}
+
+#btnDeleteVisitor{
+	/*-fx-text-fill: #006464;
+    -fx-background-color: red;
+    -fx-border-radius: 15;
+    -fx-background-radius: 20;
+    -fx-padding: 5;
+    * */
+        -fx-background-color: linear-gradient(#ff5400, #be1d00);
+    -fx-background-radius: 30;
+    -fx-background-insets: 0;
+    -fx-text-fill: white;
+}
+
+.text-field{
+-fx-border-color: null;
+-fx-border-radius: 0;
+-fx-select-on-focus:false;
+}
+

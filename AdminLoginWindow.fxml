@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.chart.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.chart.BarChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane fx:id="myBorderPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.AdminLoginController">
+   <top>
+      <AnchorPane fx:id="menuBarContainer">
+         <children>
+            <MenuBar fx:id="myMenuBar" pickOnBounds="false" prefHeight="29.0" prefWidth="1000.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" BorderPane.alignment="CENTER">
+              <menus>
+              <Menu mnemonicParsing="false" text="Home"> 
+              
+              <items>
+                        <MenuItem fx:id="menuItemLaunchHomeScreen" mnemonicParsing="false" onAction="#reLaunchHomeScreen" text="Dashboard" />
+                     </items>
+              </Menu>
+               <Menu mnemonicParsing="false" text="Visitor">
+                  <items>
+                    <MenuItem fx:id="menuItemAdd" mnemonicParsing="false" onAction="#addVisitor" text="Add Visitor" />
+                    <MenuItem fx:id="menuItemEdit" mnemonicParsing="false" onAction="#editVisitorSelectedInTable" text="Update Visitor" />
+                   
+                  </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Proximity Search">
+                  <items>
+                    <MenuItem fx:id="menuItemProximity" mnemonicParsing="false" onAction="#analyzeProximity" text="Location " />
+                  </items>
+                </Menu>
+                
+                <Menu mnemonicParsing="false" text="Analyze">
+                  <items>
+                        <MenuItem fx:id="menuItemAnalyze" mnemonicParsing="false" onAction="#analyzeGeneral" text="General Analysis" />
+                        <MenuItem fx:id="menuItemAnalyze" mnemonicParsing="false" onAction="#analyzeEmail" text="Email Analysis" />
+                        
+                  </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Update">
+                  <items>
+                    <MenuItem mnemonicParsing="false" text="Username" />
+                        <MenuItem mnemonicParsing="false" text="Password" />
+                        <MenuItem mnemonicParsing="false" text="Add Admin" />
+                  </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Help">
+                  <items>
+                    <MenuItem fx:id="menuItemManual" mnemonicParsing="false" onAction="#loadManualForHelp" text="Manual" />
+                  </items>
+                </Menu>
+                
+              </menus>
+            </MenuBar>
+           <TextField id="searchField" fx:id="textFieldSearch" prefHeight="25.0" prefWidth="182.0" promptText="Search" AnchorPane.bottomAnchor="2.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="2.0" />
+         </children>
+      </AnchorPane>
+   </top>
+   <center>
+      <VBox fx:id="vBoxForDisplay" alignment="CENTER" fillWidth="false" style="-fx-min-width: 50; -fx-background-insets: 10, 50,50,50; -fx-border-color: blue;" BorderPane.alignment="CENTER">
+         <children>
+            <HBox fx:id="hBoxForPieBarLineChart">
+               <children>
+               <LineChart id="lineBarChart" fx:id="lineChartInHomeMenu" maxHeight="600.0" maxWidth="600.0" prefHeight="473.0" prefWidth="413.0" title="No. of Visitors in last Twelve Months" titleSide="BOTTOM" HBox.hgrow="ALWAYS">
+                    <xAxis>
+                      <CategoryAxis fx:id="monthXAxisLineChart" prefHeight="20.0" prefWidth="141.0" side="BOTTOM" />
+                    </xAxis>
+                    <yAxis>
+                      <NumberAxis fx:id="numYAxisLineChart" prefHeight="423.0" prefWidth="25.0" side="LEFT" />
+                    </yAxis>
+                  </LineChart>
+                  <PieChart fx:id="chart" prefHeight="432.0" prefWidth="406.0" />
+                  <BarChart fx:id="bc" prefHeight="432.0" prefWidth="440.0" title="Top Ten States" titleSide="BOTTOM" VBox.vgrow="ALWAYS">
+                    <xAxis>
+                      <CategoryAxis side="BOTTOM" fx:id="xAxis" />
+                    </xAxis>
+                    <yAxis>
+                      <NumberAxis fx:id="yAxis" side="LEFT" />
+                    </yAxis>
+                  </BarChart>
+                  
+               </children>
+               
+               
+            </HBox>
+         </children></VBox>
+   </center>
+   <bottom>
+      <ScrollPane fx:id="scrollPaneForTable" fitToHeight="true" fitToWidth="true" hbarPolicy="ALWAYS" prefHeight="297.0" prefWidth="1000.0" vbarPolicy="ALWAYS" BorderPane.alignment="CENTER">
+        <content>
+            <TableView fx:id="myTable" onMouseClicked="#mouseClickedUpdateInformation" prefHeight="200.0" prefWidth="991.0">
+            <columnResizePolicy>
+            	<TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+            </columnResizePolicy>
+              <columns>
+                <TableColumn fx:id="serialNumberColumn" minWidth="-Infinity" prefWidth="49.0" text="SN" />
+                <TableColumn fx:id="cityColumn" minWidth="-Infinity" prefWidth="101.0" text="City" />
+                  <TableColumn fx:id="stateColumn" minWidth="-Infinity" prefWidth="75.0" text="State" />
+                  <TableColumn fx:id="zipColumn" minWidth="-Infinity" prefWidth="92.0" text="Zip Code" />
+                  <TableColumn fx:id="countryColumn" minWidth="-Infinity" prefWidth="75.0" text="Country" />
+                  <TableColumn fx:id="purposeColumn" minWidth="-Infinity" prefWidth="102.0" text="Purpose of visit" />
+                  <TableColumn fx:id="detailsColumn" minWidth="-Infinity" prefWidth="138.0" text="Visit Details" />
+                  <TableColumn fx:id="numVisitorColumn" minWidth="-Infinity" prefWidth="138.0" text="Number of Visitors" />
+                  <TableColumn fx:id="hotelStayColumn" minWidth="-Infinity" prefWidth="101.0" text="Hotel Stay" />
+                  <TableColumn fx:id="emailIDColumn" minWidth="-Infinity" prefWidth="125.0" text="E-mail" />
+                  <TableColumn fx:id="dateTimeColumn" minWidth="-Infinity" prefWidth="125.0" text="Date &amp; Time" />
+              </columns>
+            </TableView>
+        </content>
+      </ScrollPane>
+   </bottom>
+</BorderPane>

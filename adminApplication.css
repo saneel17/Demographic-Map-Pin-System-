@@ -1,0 +1,166 @@
+/* JavaFX CSS - Leave this comment until you have at least create one rule which uses -fx-Property */
+.button{
+	
+    -fx-text-fill: #006464;
+    -fx-background-color: #bebebe;
+   -fx-border-radius: 15;
+    -fx-background-radius: 20;
+    -fx-padding: 5;
+    
+    
+    
+}
+#lineBarChart {
+	-fx-stroke: #e9967a; 
+    
+    
+}
+
+.button:hover {
+    -fx-background-color: linear-gradient(#2A5058, #61a2b1);
+}
+
+.text-field {
+    -fx-font-size: 12pt;
+    -fx-font-family: "Segoe UI Semibold";
+}
+
+#textFieldSearch{
+	-fx-min-width: 100;
+	-fx-min-height: 26;
+	
+
+}
+#btnSubmitVisitor,#btnEnterVisitor,#proximityButtonId{
+	-fx-background-color: linear-gradient(#668cff, #0000b3);
+	-fx-color: white;
+	-fx-text-align: center;
+    -fx-text-decoration: none;
+    -fx-display: inline-block;
+    -fx-font-size: 1.4em;
+    -fx-margin: 4px 2px;
+    -fx-cursor: pointer;
+    -fx-background-insets: 0;
+   -fx-text-fill: white;
+   -fx-border-radius: 8;
+    -fx-background-radius: 8;
+    -fx-padding: 5;
+	
+}
+
+#btnCsvVisitor,#btnGenerateVisitor,#btnCSV{
+	-fx-background-color: linear-gradient(#00ffff, #006666);
+	-fx-color: white;
+	-fx-text-align: center;
+    -fx-text-decoration: none;
+    -fx-display: inline-block;
+    -fx-font-size: 1.4em;
+    -fx-margin: 4px 2px;
+    -fx-cursor: pointer;
+    -fx-background-insets: 0;
+   -fx-text-fill: white;
+   -fx-border-radius: 8;
+    -fx-background-radius: 8;
+    -fx-padding: 5;
+	
+}
+#btnAddVisitor{
+	
+    -fx-background-color: linear-gradient(#56ab2f, #56ab2f);
+   -fx-background-insets: 0,1,2,3;
+    -fx-background-radius: 3,2,2,2;
+    -fx-padding: 12 30 12 30;
+    -fx-text-fill: white;
+    -fx-font-size: 16px;
+  
+  
+}
+
+#btnDeleteVisitor{
+	
+    -fx-background-color: linear-gradient(#ff5400, #be1d00);
+   
+    -fx-color: white;
+    
+    -fx-text-align: center;
+    -fx-text-decoration: none;
+    -fx-display: inline-block;
+    -fx-font-size: 1.4em;
+    -fx-margin: 4px 2px;
+    -fx-cursor: pointer;
+    -fx-background-insets: 0;
+    
+  
+   -fx-text-fill: white;
+   -fx-border-radius: 8;
+    -fx-background-radius: 8;
+    -fx-padding: 5;
+    
+}
+
+#btnUpdateVisitor{
+	
+    -fx-background-color: linear-gradient(#b3ffb3, #00b300);
+   
+    -fx-color: white;
+    
+    -fx-text-align: center;
+    -fx-text-decoration: none;
+    -fx-display: inline-block;
+    -fx-font-size: 1.4em;
+    -fx-margin: 4px 2px;
+    -fx-cursor: pointer;
+    -fx-background-insets: 0;
+    
+  
+   -fx-text-fill: white;
+   -fx-border-radius: 8;
+    -fx-background-radius: 8;
+    -fx-padding: 5;
+    
+}
+
+.text-field{
+-fx-border-color: null;
+-fx-border-radius: 0;
+-fx-select-on-focus:false;
+
+-fx-min-width: 100;
+	-fx-min-height: 26;
+	
+}
+
+.addTextField{
+	
+	-fx-min-width: 200;
+	-fx-min-height: 40;
+	-fx-max-width: 200;
+	-fx-max-height: 40;
+	-fx-pref-width: 200;
+	-fx-pref-height: 40;
+	
+	
+}
+
+
+
+.label {
+    -fx-font-size: 12pt;
+    -fx-font-weight: bold;
+    -fx-text-fill: #333333;
+    -fx-effect: dropshadow( gaussian , rgba(255,255,255,0.5) , 0,0,0,1 );
+    
+}
+.instructionLabel {
+	  -fx-font-size: 20pt;
+    -fx-font-weight: bold;
+    -fx-text-fill: midnightblue;
+	
+}
+
+#searchField {
+	fx-min-width: 100;
+	-fx-min-height: 26;
+	-fx-border-radius: 20;
+    -fx-background-radius: 20;
+}

@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<GridPane prefHeight="510.0" prefWidth="810.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.LoginWindowControllers">
+   <columnConstraints>
+      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+   </rowConstraints>
+   <children>
+      <Pane layoutX="50.0" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="510.0" prefWidth="810.0" style="-fx-border-color: #9a9792;" GridPane.halignment="CENTER" GridPane.hgrow="NEVER" GridPane.valignment="CENTER" GridPane.vgrow="NEVER">
+         <children>
+            <Label alignment="CENTER" layoutX="54.0" layoutY="143.0" prefHeight="51.0" prefWidth="260.0" text="* Select Login Mode" textFill="#d69013" AnchorPane.leftAnchor="54.0" AnchorPane.rightAnchor="496.0">
+               <font>
+                  <Font size="25.0" />
+               </font>
+            </Label>
+            <Button id="submitLogin" fx:id="submitLoginButton" layoutX="598.0" layoutY="388.0" mnemonicParsing="false" onAction="#loginIsSelected" onMouseClicked="#loginIsSelected" prefHeight="44.0" prefWidth="118.0" text="Log In" textFill="#3ab24a">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Button>
+            <RadioButton fx:id="adminRadioButton" contentDisplay="CENTER" layoutX="68.0" layoutY="288.0" mnemonicParsing="false" prefHeight="64.0" prefWidth="158.0" text="Admin" AnchorPane.leftAnchor="67.0" AnchorPane.rightAnchor="575.0" AnchorPane.topAnchor="287.0">
+               <toggleGroup>
+                  <ToggleGroup fx:id="loginMode" />
+               </toggleGroup>
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </RadioButton>
+            <TextField fx:id="userName" layoutX="440.0" layoutY="207.0" prefHeight="51.0" prefWidth="276.0" promptText="Username">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </TextField>
+            <PasswordField fx:id="passWord" layoutX="440.0" layoutY="291.0" prefHeight="51.0" prefWidth="276.0" promptText="Password">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </PasswordField>
+            <Button fx:id="resetButoon" layoutX="440.0" layoutY="388.0" mnemonicParsing="false" onAction="#resetIsClicked" prefHeight="44.0" prefWidth="144.0" text="Clear">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Button>
+            <Label fx:id="labelWindow" alignment="CENTER" contentDisplay="CENTER" layoutX="1.0" layoutY="1.0" maxHeight="1.7976931348623157E308" prefHeight="110.0" prefWidth="808.0" style="-fx-background-color: #c2c6cc;" text="Monroe-West Monroe Convention &amp; Visitors Bureau " textFill="#225db5" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <font>
+                  <Font size="30.0" />
+               </font>
+            </Label>
+            <RadioButton fx:id="userRadioButton" contentDisplay="CENTER" layoutX="67.0" layoutY="210.0" mnemonicParsing="false" prefHeight="51.0" prefWidth="167.0" selected="true" text="Staff" toggleGroup="$loginMode">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </RadioButton>
+            <Label alignment="CENTER" layoutX="426.0" layoutY="143.0" prefHeight="51.0" prefWidth="306.0" text="* Enter User ID and Password" textFill="#cd8513">
+               <font>
+                  <Font size="21.0" />
+               </font>
+            </Label>
+            <Label fx:id="forgotUserNameOrPassword" alignment="CENTER" layoutX="440.0" layoutY="451.0" prefHeight="35.0" prefWidth="247.0" text="Forgot Username/Password?" textFill="#da4918">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Label fx:id="loginFailureMessage" alignment="CENTER" contentDisplay="CENTER" layoutX="58.0" layoutY="359.0" prefHeight="110.0" prefWidth="327.0" textFill="#cd1616">
+               <font>
+                  <Font size="15.0" />
+               </font></Label>
+         </children>
+      </Pane>
+   </children>
+</GridPane>
